@@ -1,0 +1,106 @@
+title
+oluşturulan sayfaların başlığıdır(en üst kısımda)
+
+b ve strong 
+kalın
+
+<br>paragraf boşluğu
+<br/>satır boşluğu
+bana göre ikisi de aynı ama hoca böyle söyledi
+
+u/ins
+altı çizili
+
+i/em
+italik
+
+del/s/strike
+üstü çizili
+
+
+ben<sub>iyiyim</sub>
+üst alt
+
+5<sup>2</sub>
+alt üst
+
+<font color(yazının rengi)=" " size(1-7,yazının büyüklüğü)=" " face(yazı tipi)=" "> </font>
+<h1></h1> başlık olarak kullanılır
+h1 den h6 ya kadar gider ve boyut küçülür.
+
+<img src(görselin adı yoluyla birlikte)=" " width(genişlik)=" " height(yükseklik)=" " title(açıklama baloncuğu)=" " 
+alt(kullanılan görselin arama motorlarında çıkması için)=" " border(kenarlık)=" ">
+diyelim ki genişliği verdin yüksekliği yazmadın otomatik olarak verilen genişliğe uygun görseli bozmayacak şekilde değer atanır yüksekliğe
+
+
+<ol type=" " start=" "></ol>sıralı liste 
+<ul type="square(içi dolu kare),circle(içi boş çember),disc(içi dolu çember) "></ul>sırasız liste
+<li></li> etiketleriyle oluşturulur ikisi de 
+
+<a href=" "(nereye gitmek isteniyor) target="_blank"(linke basıldığında yeni bir sekmede açılır)>
+sayfada hangi adla gözükeceği yazılır buraya</a>
+
+sayfa içi 
+<a href="#...">sayfada hangi adla gözükeceği yazılır buraya</a>
+<a name="..."></a>
+
+<table border=" " bordercolor=" " bgcolor=" " >
+<tr>->satırları oluşturur
+<td></td>satırdaki kutucukları oluşturur
+</tr>
+</table>
+align="left,center,right" 
+valign="top,middle,bottom"
+colspan->yan yana kutucuk birleştirir
+rowspan->alt alta kutucuk birleştirir
+cellspacing->hücreler arası boşluk
+cellpadding->hücre içi genişlik
+background->arka plan görseli
+<iframe src=" " frameborder(çerçeve kenarlığı)="0" name="çerçeve" scrolling(kaydırma çubukları)="no"></iframe>
+<a target="çerçeve"></a>
+
+position:static ->sol üst köşeye göre kendisini ayarlar ancak kendinden önceki de static
+ise ona göre ayarlar kendisini
+position:relative ->kendisinden önce gelen elemanı baz alır
+margin ve top,left kullanılır
+örnek;
+2.kutuyu relative olarak ayarladım ve aşağıya 50px konumlu
+3.kutu ise static bu yüzden 2.kutunun son 50px de başladı ve altında kaldı
+position:absolute->mutlak,kendinden önce gelen elemanları yok sayıyor,her şeyin üstünde
+position:fixed ->kaydırma çubuğuyla bile aşağı indirdiğimizde sayfada konumunu korur
+static in üstünde relative,absolute un altında 
+margin->dış boşluk üst,sağ,alt,sol saat yönü auto var 
+padding->iç boşluk
+text-align->yazının hizası
+background->arka plan rengi/görseli
+color->yazı rengi
+border->border:5px solid renk
+font:bold(kalın) 20px tahoma
+
+float:left
+float:right
+clear:both->kaydırmaları temizle
+
+box-shadow->gölge verir
+box-shadow:10px(sağ) 5px(alt) 5px(gölge yoğunluğu) renk
+-10px(sol) -5px(üst)
+her taraf için 10px(sağ) 5px(alt) 5px(gölge yoğunluğu) renk,-10px(sağ) -5px(alt) 5px(gölge yoğunluğu) renk
+border-radius:5px(sol üst) 10px(sağ üst) 15px 20px  saat yönünde,köşeleri yuvarlatır
+border-radius:5px(sol üst,sağ alt) 10px 
+daire için bir kenarın yarısı kadar border-radius değeri verilmeli
+transform:rotate(45deg)->45 derece döndürür
+
+sınıf seçicisi kullanarak css
+<head>
+<style type="text/css">
+.kutu{    }//kendi oluşturduğumuz bir ad ise . koyarız başa
+</style>
+</head>
+
+<body>
+<div class="kutu"></div>
+</body>
+
+z-index->sayfadaki nesnelerin hangisinin altta veya üstte olduğunu belirler
+değeri büyük olan üsttedir
+bunu kullanabilmek için position değerinin relative veya absolute olması gerekir
